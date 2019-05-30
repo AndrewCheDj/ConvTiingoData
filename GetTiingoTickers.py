@@ -7,9 +7,9 @@ b=[]
 with open ("E:\\code\\tiingoCSV\\supported_tickers.csv", "r") as objcsv:
    reader = csv.reader(objcsv)
    for row in reader:
-      ticker = str(row[0])         #названия акций
-      if row[4] != '':
-          b.append(ticker)             # создание списка из названий акций
+      ticker = str(row[0])         # названия акций
+      if row[4] != '':             # отсечение данных без даты
+          b.append(ticker)         # создание списка из названий акций
    print (b)                       # печать этого списка
 
 
