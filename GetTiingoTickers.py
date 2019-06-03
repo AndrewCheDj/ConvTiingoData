@@ -7,9 +7,9 @@ import requests
 import zipfile
 
 # скачивание и анзип котировок
-f = open(r'E:\code\tiingoCSV\tiingoDATA.zip', "wb")  # открываем файл для записи, в режиме wb
-ufr = requests.get("https://apimedia.tiingo.com/docs/tiingo/daily/supported_tickers.zip")  # делаем запрос
-f.write(ufr.content)  # записываем содержимое в файл
+f = open(r'E:\code\tiingoCSV\tiingoDATA.zip', "wb")  # открывает файл для записи, в режиме wb
+ufr = requests.get("https://apimedia.tiingo.com/docs/tiingo/daily/supported_tickers.zip")  # делает запрос
+f.write(ufr.content)  # записывает содержимое в файл
 f.close()
 
 z = zipfile.ZipFile('E:\\code\\tiingoCSV\\tiingoDATA.zip', 'r')
