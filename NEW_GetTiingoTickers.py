@@ -35,6 +35,13 @@ config['session'] = True
 config['api_key'] = "69954dec5d2661170ef8550cb28571cfa504c100"
 client = TiingoClient(config)
 
+
+# скачивание котировок через TiingoClient
+tickers = client.list_stock_tickers()
+for t in range(len(tickers)):
+    print(tickers[t]['ticker'])
+
+
 with open("E:\\code\\tiingoCSV\\rec.csv", 'w', newline='') as f:
     for tick in b:
        a += 1
