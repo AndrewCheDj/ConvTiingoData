@@ -1,7 +1,29 @@
 # библиотеки для записи CSV
 from tiingo import TiingoClient
 import csv
-from threading import Thread   # библиотека для создания потоков
+import threading  # библиотека для создания потоков
+
+
+
+def get_rates ():
+    threads = []
+    print(threads)
+    for y in range(5):
+        a=threads.append(threading.Thread(target=get_rates, args=(y))
+
+    # Запускаем каждый поток
+    for thread in threads:
+       thread.start()
+       print ('starting thread'+ str(pair))
+
+    # Ждем завершения каждого потока
+    for thread in threads:
+       thread.join()
+get_rates ()
+
+
+
+
 
 config = {}
 config['session'] = True
@@ -18,9 +40,5 @@ with open("E:\\code\\tiingoCSV\\rec.csv", 'w', newline='') as f:
             print([a, quotes[0]['high']])  # выводит название акции и котировку по заданному значению
             writer = csv.writer(f, delimiter=';')
             writer.writerow([a, quotes[0]['high']])
-
-
-
-
 
 
